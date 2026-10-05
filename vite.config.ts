@@ -8,7 +8,20 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
+      },
+    },
+    build: {
+      rolldownOptions: {
+        output: {
+          codeSplitting: {
+            groups: [
+              { name: 'react', test: /node_modules[\\/](react|react-dom|scheduler)/ },
+              { name: 'motion', test: /node_modules[\\/]motion/ },
+              { name: 'icons', test: /node_modules[\\/]lucide-react/ },
+            ],
+          },
+        },
       },
     },
     server: {

@@ -1,0 +1,6 @@
+{
+  "name": "Doctor Find",
+  "description": "Secure Patient Transfer & Doctor Availability Platform with AES-256-GCM Encryption, SHA-256 Integrity Verification, RBAC, Complete Audit Logging, and Human-in-the-Loop Doctor Approval.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
